@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // padding: 28px 80px;
+  padding: 28px 10px;
+
+  @media (min-width: 375px) {
+    padding: 28px 30px;
+  }
+
+  &__title {
+    font-weight: 700;
+    // font-size: 36px;
+    font-size: 20px;
+  }
+
+  &__navbar {
+    font-size: 14px;
+    a {
+      // padding: 0 20px;
+      padding: 0 5px;
+    }
+    a:last-of-type {
+      padding-right: 0;
+    }
+
+    a:hover {
+      color: $primary;
+    }
+  }
+}
