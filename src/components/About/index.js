@@ -1,5 +1,5 @@
 import pp from "../../assets/3700_5_03.png";
-import { IoChevronDown, IoChevronUp } from "react-icons/io5";
+import { IoChevronDown } from "react-icons/io5";
 
 import { useState } from "react";
 

@@ -1,0 +1,88 @@
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 396px;
+  //   padding: 0 15px;
+
+  & > h2 {
+  }
+}
+
+.carousel {
+  position: relative;
+  // background-color: red;
+
+  &__chevron {
+    position: absolute;
+    font-size: 1.75em;
+    transform: translate(0, -50%);
+    z-index: 1;
+    cursor: pointer;
+    // color: $dark-font;
+
+    &--back {
+      left: 0;
+      top: 50%;
+    }
+
+    &--forward {
+      right: 0;
+      top: 50%;
+    }
+  }
+
+  .cards-container {
+    display: flex;
+    width: 270px;
+    overflow-x: hidden;
+
+    .card {
+      background-color: $light-tertiary;
+      min-width: 100%;
+      height: 241px;
+      margin: 0 20px;
+      padding: 36px 50px;
+      box-sizing: border-box;
+      transition: transform 700ms ease-in-out;
+      // transform: translateX(-310px);
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &:hover {
+        border-bottom: 5px solid $primary;
+      }
+
+      &__logo {
+        width: 80px;
+        height: 80px;
+        color: $primary;
+        margin-left: -10px;
+      }
+
+      .logo3 {
+        margin-left: -5px;
+      }
+
+      .logo4 {
+        margin-left: -2px;
+      }
+
+      .logo5 {
+        margin-left: -22px;
+      }
+
+      &__title {
+        padding-top: 50px;
+        margin: 0;
+        font-size: 26px;
+        color: $dark-font;
+      }
+    }
+  }
+}
