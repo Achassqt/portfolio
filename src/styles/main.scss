@@ -1,11 +1,16 @@
 @import "./utils/variables";
 @import "./utils/keyframes";
+@import "./utils/mixin";
 
 @import "./base/typography";
+@import "./base/scrollbar";
 
 @import "./components/about";
 @import "./components/carousel";
+@import "./components/contact";
 
 @import "./layouts/header";
+@import "./layouts/footer";
 
 @import "./pages/home";
+@import "./pages/projects";

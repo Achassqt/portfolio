@@ -1,0 +1,23 @@
+* {
+  scrollbar-color: rgba($dark-font, 1) $tertiary;
+
+  &::-webkit-scrollbar {
+    // display: none;
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $tertiary;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba($dark-font, 1);
+    border-radius: 20px;
+    border: 2px solid $tertiary;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

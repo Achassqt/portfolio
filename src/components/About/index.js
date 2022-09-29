@@ -1,4 +1,6 @@
 import pp from "../../assets/3700_5_03.png";
+// import moi from "../../assets/IMG_2492.JPG";
+// import moi from "../../assets/792FDC72-C8EB-4573-932E-F9CC9588586C.jpg";
 import { IoChevronDown } from "react-icons/io5";
 
 import { useState } from "react";
@@ -14,8 +16,12 @@ function About() {
           <h1>Bonjour, Je suis Sacha</h1>
           <span>Développeur web junior</span>
           <div className="about-top__left__btn-container">
-            <button>Télécharger CV</button>
-            <button>En savoir plus</button>
+            <a href="test.docx" download="Mon_CV">
+              <button>Télécharger CV</button>
+            </a>
+            <a href="#about" onClick={() => setToggleText(true)}>
+              <button>En savoir plus</button>
+            </a>
           </div>
         </article>
         <div className="about-top__right">
@@ -23,6 +29,7 @@ function About() {
         </div>
       </div>
       <article className="about-bottom">
+        <a id="about" />
         <div
           onClick={() => {
             setToggleText(!toggleText);
@@ -32,24 +39,21 @@ function About() {
         >
           <h2>A propos</h2>
           <IoChevronDown
-            // onClick={() => {
-            //   setToggleText(!toggleText);
-            //   if (toggleText) setAnimation(true);
-            // }}
+            id="test"
             style={{
               animation: toggleText
                 ? "rotate 500ms both"
                 : animation && "rotate2 500ms both",
             }}
           />
-          {/* <IoChevronUp /> */}
         </div>
         <p style={{ display: toggleText ? "inline-block" : "none" }}>
-          Le Lorem Ipsum est simplement du faux texte employé dans la
-          composition et la mise en page avant impression. Le Lorem Ipsum est le
-          faux texte standard de l'imprimerie depuis les années 1500, quand un
-          imprimeur anonyme assembla ensemble des morceaux de texte pour
-          réaliser un livre spécimen de polices de texte.
+          Passionné d'informatique et de nouvelles technologies, j'ai décidé de
+          me lancer dans le développement web. A force de rigueur et de volonté,
+          j' ai obtenu un diplôme dans ce domaine tout en continuant de me
+          former en autodidacte. Je souhaite acquérir encore plus d'expérience,
+          en rejoignant une équipe de professionnels tout en apportant de mes
+          compétences.
         </p>
       </article>
     </section>
