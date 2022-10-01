@@ -47,7 +47,7 @@ function App() {
         </Route>
         <Route path="/projects" element={<Projects />} />
       </Routes>
-      <a id="contact" />
+      <span id="contact"></span>
       <Contact />
       <footer className="footer">
         <AiOutlineCopyright className="footer__logo" />

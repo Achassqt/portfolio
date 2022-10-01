@@ -16,7 +16,7 @@ function About() {
           <h1>Bonjour, Je suis Sacha</h1>
           <span>Développeur web junior</span>
           <div className="about-top__left__btn-container">
-            <a href="test.docx" download="Mon_CV">
+            <a href="cv.pdf" download="sacha-souquet_CV">
               <button>Télécharger CV</button>
             </a>
             <a href="#about" onClick={() => setToggleText(true)}>
@@ -29,7 +29,7 @@ function About() {
         </div>
       </div>
       <article className="about-bottom">
-        <a id="about" />
+        <span id="about"></span>
         <div
           onClick={() => {
             setToggleText(!toggleText);

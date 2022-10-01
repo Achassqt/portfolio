@@ -3,9 +3,7 @@ import Carousel from "../components/Carousel";
 import malt from "../assets/malt.svg";
 import maltOriginalColor from "../assets/malt-original-color.svg";
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
-import Contact from "../components/Contact";
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
 
 function Home() {
   const [toggleMaltLogo, setToggleMaltLogo] = useState(false);
@@ -47,23 +45,34 @@ function Home() {
           </div>
           <h3 className="twitter">Twitter</h3>
         </a>
-        <a
+        {/* <a
           href="#"
           target="_blank"
           rel="noreferrer"
           onMouseEnter={() => setToggleMaltLogo(true)}
           onMouseLeave={() => setToggleMaltLogo(false)}
           className="social-network__content malt"
+        > */}
+        <div
+          onMouseEnter={() => {
+            setToggleMaltLogo(true);
+            document.getElementById("maltsoon").innerHTML = "Bientôt !";
+          }}
+          onMouseLeave={() => {
+            setToggleMaltLogo(false);
+            document.getElementById("maltsoon").innerHTML = "Malt";
+          }}
+          className="social-network__content malt"
         >
           <div className="social-network__content__logo-container">
             <img src={toggleMaltLogo ? maltOriginalColor : malt} alt="Malt" />
           </div>
-          <h3 className="malt">Malt</h3>
-        </a>
+          <h3 id="maltsoon" className="malt">
+            Malt
+          </h3>
+        </div>
       </section>
       <Carousel />
-      {/* <Contact /> */}
-      {/* <Outlet /> */}
     </main>
   );
 }

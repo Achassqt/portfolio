@@ -18,7 +18,7 @@ import { useState } from "react";
 
 function Projects() {
   const [toggleFormation, setToggleFormation] = useState(false);
-  const [togglePerso, setTogglePerso] = useState(false);
+  // const [togglePerso, setTogglePerso] = useState(false);
   const [animation, setAnimation] = useState(false);
 
   const [showMore, setShowMore] = useState(false);
@@ -137,15 +137,15 @@ function Projects() {
     },
   ];
 
-  const projectsPersoArray = [
-    {
-      srcImg: groupomaniaGreen,
-      srcImgHover: groupomania,
-      linkLive: "#",
-      linkGithub: "https://github.com/Achassqt/SachaSouquet_7_29062022",
-      color: "#FD2D01",
-    },
-  ];
+  // const projectsPersoArray = [
+  //   {
+  //     srcImg: groupomaniaGreen,
+  //     srcImgHover: groupomania,
+  //     linkLive: "#",
+  //     linkGithub: "https://github.com/Achassqt/SachaSouquet_7_29062022",
+  //     color: "#FD2D01",
+  //   },
+  // ];
 
   return (
     <main className="container">
@@ -319,7 +319,7 @@ function Projects() {
           ))}
         </div>
       )}
-      <div
+      {/* <div
         onClick={() => {
           setTogglePerso(!togglePerso);
           if (togglePerso) setAnimation(true);
@@ -400,7 +400,7 @@ function Projects() {
             </div>
           ))}
         </div>
-      )}
+      )} */}
     </main>
   );
 }
