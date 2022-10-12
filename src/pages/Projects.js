@@ -11,6 +11,8 @@ import piiquante from "../assets/piiquante.svg";
 import piiquanteGreen from "../assets/piiquante-green.svg";
 import groupomania from "../assets/groupomania.svg";
 import groupomaniaGreen from "../assets/groupomania-green.svg";
+import sfm from "../assets/shifumi.png";
+import sfmGreen from "../assets/shifumi-green.png";
 
 import { IoChevronDown } from "react-icons/io5";
 
@@ -18,7 +20,7 @@ import { useState } from "react";
 
 function Projects() {
   const [toggleFormation, setToggleFormation] = useState(false);
-  // const [togglePerso, setTogglePerso] = useState(false);
+  const [togglePerso, setTogglePerso] = useState(false);
   const [animation, setAnimation] = useState(false);
 
   const [showMore, setShowMore] = useState(false);
@@ -35,8 +37,8 @@ function Projects() {
           <br /> - Intégrer du contenu conformément à une maquette <br />
         </p>
       ),
-      linkLive: "https://achassqt.github.io/SachaSouquet_2_10032021/",
-      linkGithub: "https://github.com/Achassqt/SachaSouquet_2_10032021",
+      linkLive: "https://achassqt.github.io/Openclassrooms_Reservia/",
+      linkGithub: "https://github.com/Achassqt/Openclassrooms_Reservia",
       color: "#0065FC",
     },
     {
@@ -55,8 +57,8 @@ function Projects() {
           hébergement
         </p>
       ),
-      linkLive: "https://achassqt.github.io/SachaSouquet_3_10052021/",
-      linkGithub: "https://github.com/Achassqt/SachaSouquet_3_10052021",
+      linkLive: "https://achassqt.github.io/Openclassrooms_ohmyfood/",
+      linkGithub: "https://github.com/Achassqt/Openclassrooms_ohmyfood",
       color: "#9356DC",
     },
     {
@@ -74,8 +76,9 @@ function Projects() {
           - Optimiser le référencement d'un site web <br />
         </p>
       ),
-      linkLive: "https://achassqt.github.io/SachaSouquet_4_13102021/",
-      linkGithub: "https://github.com/Achassqt/SachaSouquet_4_13102021",
+      linkLive: "https://achassqt.github.io/Openclassrooms_la-chouette-agence/",
+      linkGithub:
+        "https://github.com/Achassqt/Openclassrooms_la-chouette-agence",
       color: "#C27956",
     },
     {
@@ -93,7 +96,7 @@ function Projects() {
         </p>
       ),
       linkLive: false,
-      linkGithub: "https://github.com/Achassqt/SachaSouquet_5_12012022",
+      linkGithub: "https://github.com/Achassqt/Openclassrooms_kanap",
       color: "#0A3B4D",
     },
     {
@@ -112,7 +115,7 @@ function Projects() {
         </p>
       ),
       linkLive: false,
-      linkGithub: "https://github.com/Achassqt/SachaSouquet_6_01042022",
+      linkGithub: "https://github.com/Achassqt/Openclassrooms_piiquante",
       color: "#6d071a",
     },
     {
@@ -121,31 +124,40 @@ function Projects() {
       description: (
         <p>
           Nom du projet : <strong id="project-title-5">Groupomania</strong>{" "}
+          <br />
           Objectif : Créer un réseau social d'entreprise <br />
           Compétences obtenues : <br />
           - Authentifier un utilisateur et maintenir sa session <br />-
           Développer l'interface d'un site web grâce à un framework front-end{" "}
-          <br />
-          - Implémenter un stockage de données sécurisé en utilisant une base de
-          données
-          <br />
+          <br />- Implémenter un stockage de données sécurisé en utilisant une
+          base de données
         </p>
       ),
       linkLive: false,
-      linkGithub: "https://github.com/Achassqt/SachaSouquet_7_29062022",
+      linkGithub: "https://github.com/Achassqt/Openclassrooms_groupomania",
       color: "#FD2D01",
     },
   ];
 
-  // const projectsPersoArray = [
-  //   {
-  //     srcImg: groupomaniaGreen,
-  //     srcImgHover: groupomania,
-  //     linkLive: "#",
-  //     linkGithub: "https://github.com/Achassqt/SachaSouquet_7_29062022",
-  //     color: "#FD2D01",
-  //   },
-  // ];
+  const projectsPersoArray = [
+    {
+      srcImg: sfmGreen,
+      srcImgHover: sfm,
+      description: (
+        <p>
+          Nom du projet :{" "}
+          <strong id="project-title-0-array-two">ShiFuMi</strong> <br />{" "}
+          Objectif : Jouer au jeu "pierre feuille ciseaux" contre l'ordinateur{" "}
+          <br />
+          Compétence obtenue : <br />- Amélioration de mes connaissances en
+          Javascript
+        </p>
+      ),
+      linkLive: "https://achassqt.github.io/odin_rock-paper-scissors/",
+      linkGithub: "https://github.com/Achassqt/odin_rock-paper-scissors",
+      color: "#f1d849",
+    },
+  ];
 
   return (
     <main className="container">
@@ -156,7 +168,7 @@ function Projects() {
         }}
         className="title"
       >
-        <h2>Projets formation (Openclassrooms)</h2>
+        <h2>Projets formation "Développeur Web" Openclassrooms</h2>
         <IoChevronDown
           style={{
             animation: toggleFormation
@@ -319,14 +331,14 @@ function Projects() {
           ))}
         </div>
       )}
-      {/* <div
+      <div
         onClick={() => {
           setTogglePerso(!togglePerso);
           if (togglePerso) setAnimation(true);
         }}
         className="title"
       >
-        <h2>Projets personnels</h2>
+        <h2>Projets formation "The Odin Project"</h2>
         <IoChevronDown
           style={{
             animation: togglePerso
@@ -339,20 +351,78 @@ function Projects() {
         <div className="projects-container">
           {projectsPersoArray.map((project, index) => (
             <div className="project">
-              <div className="project__img-container">
+              <figure
+                onMouseEnter={() => {
+                  const logo = document.getElementById(
+                    `image-${index}-array-two`
+                  );
+                  logo.src = project.srcImgHover;
+                }}
+                onMouseLeave={() => {
+                  const logo = document.getElementById(
+                    `image-${index}-array-two`
+                  );
+                  logo.src = project.srcImg;
+                }}
+                // onClick={() => {
+                //   const logo = document.getElementById(`image-${index}`);
+                //   logo.style.animation = "initial-top 500ms both";
+                //   const description = document.getElementById(
+                //     `description-${index}`
+                //   );
+                //   description.style.display = "block";
+                //   description.style.animation = "bottom-initial 500ms";
+                //   setShowMore(true);
+                // }}
+                className="project__img-container"
+              >
                 <img
                   src={project.srcImg}
-                  onMouseEnter={(e) => {
-                    e.target.src = project.srcImgHover;
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.src = project.srcImg;
-                  }}
                   alt="project illustration"
-                  id={`image-${index}`}
+                  onClick={(e) => {
+                    e.target.style.animation = "initial-top 500ms both";
+                    const description = document.getElementById(
+                      `description-${index}-array-two`
+                    );
+                    description.style.display = "block";
+                    description.style.animation = "bottom-initial 500ms";
+                    setShowMore(true);
+                  }}
+                  id={`image-${index}-array-two`}
                   className="project__img"
                 />
-              </div>
+                <span>
+                  {showMore
+                    ? "Cliquez pour voir le logo"
+                    : "Cliquez pour en savoir plus"}
+                </span>
+                <figcaption
+                  id={`description-${index}-array-two`}
+                  onClick={(e) => {
+                    // e.target.style.display = "none";
+                    e.target.style.animation = "initial-bottom 500ms both";
+                    const logo = document.getElementById(
+                      `image-${index}-array-two`
+                    );
+                    // logo.style.display = "block";
+                    logo.style.animation = "top-initial 500ms both";
+                    setShowMore(false);
+                  }}
+                >
+                  {project.description}
+                </figcaption>
+                {/* <object
+              id={`image-${index}`}
+              type="image/svg+xml"
+              data={project.srcImg}
+              onMouseEnter={(e) => {
+                e.target.data = project.srcImgHover;
+              }}
+              onMouseLeave={(e) => {
+                e.target.data = project.srcImg;
+              }}
+            ></object> */}
+              </figure>
               <div className="project__links">
                 <a
                   href={project.linkLive}
@@ -362,15 +432,29 @@ function Projects() {
                     e.target.style.borderColor = `${project.color}`;
                     e.target.style.backgroundColor = `${project.color}`;
 
-                    const imgSrc = document.getElementById(`image-${index}`);
+                    const imgSrc = document.getElementById(
+                      `image-${index}-array-two`
+                    );
                     imgSrc.src = project.srcImgHover;
+
+                    const projectTitle = document.getElementById(
+                      `project-title-${index}-array-two`
+                    );
+                    projectTitle.style.color = `${project.color}`;
                   }}
                   onMouseLeave={(e) => {
                     e.target.style.borderColor = "";
                     e.target.style.backgroundColor = "";
 
-                    const imgSrc = document.getElementById(`image-${index}`);
+                    const imgSrc = document.getElementById(
+                      `image-${index}-array-two`
+                    );
                     imgSrc.src = project.srcImg;
+
+                    const projectTitle = document.getElementById(
+                      `project-title-${index}-array-two`
+                    );
+                    projectTitle.style.color = `white`;
                   }}
                 >
                   Site live
@@ -383,15 +467,29 @@ function Projects() {
                     e.target.style.borderColor = `${project.color}`;
                     e.target.style.backgroundColor = `${project.color}`;
 
-                    const imgSrc = document.getElementById(`image-${index}`);
+                    const imgSrc = document.getElementById(
+                      `image-${index}-array-two`
+                    );
                     imgSrc.src = project.srcImgHover;
+
+                    const projectTitle = document.getElementById(
+                      `project-title-${index}-array-two`
+                    );
+                    projectTitle.style.color = `${project.color}`;
                   }}
                   onMouseLeave={(e) => {
                     e.target.style.borderColor = "";
                     e.target.style.backgroundColor = "";
 
-                    const imgSrc = document.getElementById(`image-${index}`);
+                    const imgSrc = document.getElementById(
+                      `image-${index}-array-two`
+                    );
                     imgSrc.src = project.srcImg;
+
+                    const projectTitle = document.getElementById(
+                      `project-title-${index}-array-two`
+                    );
+                    projectTitle.style.color = `white`;
                   }}
                 >
                   Github
@@ -400,7 +498,7 @@ function Projects() {
             </div>
           ))}
         </div>
-      )} */}
+      )}
     </main>
   );
 }
