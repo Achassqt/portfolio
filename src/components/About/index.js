@@ -1,6 +1,4 @@
-import pp from "../../assets/3700_5_03.png";
-// import moi from "../../assets/IMG_2492.JPG";
-// import moi from "../../assets/792FDC72-C8EB-4573-932E-F9CC9588586C.jpg";
+import pp from "../../assets/illustrationlaptop.png";
 import { IoChevronDown } from "react-icons/io5";
 
 import { useState } from "react";
