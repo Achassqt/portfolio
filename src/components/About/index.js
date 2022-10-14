@@ -1,4 +1,6 @@
-import pp from "../../assets/illustrationlaptop.png";
+// import pp from "../../assets/illustrationlaptop.png";
+import pp from "../../assets/laptop-no-bg.png";
+// import pp from "../../assets/laptop.png";
 import { IoChevronDown } from "react-icons/io5";
 
 import { useState } from "react";
