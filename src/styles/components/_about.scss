@@ -15,7 +15,11 @@
 
   @include tablette {
     padding: 28px 40px;
-    padding-top: 100px;
+    padding-top: 60px;
+  }
+
+  @include laptop {
+    padding-top: 0;
   }
 }
 
@@ -28,6 +32,10 @@
 
   @include tablette {
     flex-direction: row;
+  }
+
+  @include laptop {
+    height: 90vh;
   }
 
   @media (min-width: 1382px) {
@@ -165,6 +173,10 @@
       pointer-events: none;
     }
 
+    @include laptop {
+      margin-top: 0px;
+    }
+
     & > h2 {
       margin: 0;
 
@@ -188,7 +200,7 @@
     animation: opacity 1000ms ease;
 
     @include tablette {
-      max-width: 745px;
+      max-width: 800px;
       text-align: center;
       display: inline !important;
     }
