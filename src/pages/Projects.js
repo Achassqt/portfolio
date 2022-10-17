@@ -338,7 +338,7 @@ function Projects() {
         }}
         className="title"
       >
-        <h2>Projets formation "The Odin Project"</h2>
+        <h2>Projets formation "The Odin Project" (en cours)</h2>
         <IoChevronDown
           style={{
             animation: togglePerso
