@@ -45,15 +45,15 @@ function Home() {
           </div>
           <h3 className="twitter">Twitter</h3>
         </a>
-        {/* <a
-          href="#"
+        <a
+          href="https://www.malt.fr/profile/sachasouquet?q=sacha+souquet&location=&searchid=6385ebb0abcd89520d5b8fba"
           target="_blank"
           rel="noreferrer"
           onMouseEnter={() => setToggleMaltLogo(true)}
           onMouseLeave={() => setToggleMaltLogo(false)}
           className="social-network__content malt"
-        > */}
-        <div
+        >
+          {/* <div
           onMouseEnter={() => {
             setToggleMaltLogo(true);
             document.getElementById("maltsoon").innerHTML = "Bientôt !";
@@ -63,14 +63,15 @@ function Home() {
             document.getElementById("maltsoon").innerHTML = "Malt";
           }}
           className="social-network__content malt"
-        >
+        > */}
           <div className="social-network__content__logo-container">
             <img src={toggleMaltLogo ? maltOriginalColor : malt} alt="Malt" />
           </div>
           <h3 id="maltsoon" className="malt">
             Malt
           </h3>
-        </div>
+          {/* </div> */}
+        </a>
       </section>
       <Carousel />
     </main>
